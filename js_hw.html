@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Number guessing</title>
+ </head>
+ <body>
+ 	<script>
+ 		var number = parseInt(window.prompt('Please guess a number from 1 to 10'));
+ 		
+ 		var rand = Math.floor((Math.random()*10)+1);
+ 		var request;
+ 		var showAlert = false;
+ 		while(number == rand){
+ 			showAlert=true;
+ 			break;
+ 		} 		
+ 		document.writeln(rand+'is the answer,Thank you for playing')
+ 		while(number != rand) {
+ 			request = window.prompt('Wrong!! Do you want to guess again ? print y or n');
+ 			if (request == 'y'){
+ 				number=parseInt(window.prompt('Guess a number from 1 to 10 again'));
+ 			} else if (request == 'n') {
+ 				alert(" Thank you for playing ");
+ 				break; 				
+ 			}
+ 			
+ 		}
+ 		if(showAlert){
+ 			alert(number+"is the random number");
+ 		}
+ 		
+ 	</script>
+ 	
+ </body>
+ </html>
